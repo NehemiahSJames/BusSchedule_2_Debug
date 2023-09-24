@@ -28,10 +28,8 @@ import kotlinx.coroutines.flow.flowOf
 
 class BusScheduleViewModel(private val busDao: BusDao): ViewModel() {
 
-    // Get example bus schedule
     fun getFullSchedule(): Flow<List<BusSchedule>> = busDao.getAll()
 
-    // Get example bus schedule by stop
     fun getScheduleFor(stopName: String): Flow<List<BusSchedule>> = busDao.GetStopByName(stopName)
 
     companion object {
